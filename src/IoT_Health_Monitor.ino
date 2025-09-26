@@ -7,7 +7,7 @@
 
 // Blynk and WiFi credentials
 char auth[] = "DKNZ75LbBf9MTtAWZS_zYrIMxCi4vM3w"; // Blynk Auth Token
-char ssid[] = "Sick.";                           // WiFi SSID
+char ssid[] = "Idris.";                           // WiFi SSID
 char pass[] = "ha03haha";                        // WiFi Password
 
 // -------------------- Include Libraries --------------------
