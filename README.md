@@ -25,21 +25,32 @@ An 'IoT-based health monitoring system' designed to track vital signs such as he
 - Ensured modular design for easy upgrades and scaling
 
 
-# System Architecture Diagram  
-
-Below is a high-level architecture showing how the system works: 
-
-
 # How It Works
-1. Sensors capture patient vital signs.  
-2. Microcontroller (Arduino/ESP32) processes sensor data.  
-3. Data is transmitted for logging and monitoring.  
-4. Python scripts are used for visualization and analysis.  
-5. Alerts are triggered if readings go beyond safe thresholds.  
 
+1. Data Collection 
+   - Biomedical sensors (e.g., heart rate, temperature, SpO₂) capture real-time health data.  
+   - The Arduino board reads sensor values through its analog and digital pins.  
+
+2. Processing & Control 
+   - The Arduino IDE code processes the data and applies threshold logic.  
+   - If abnormal readings are detected, actuators (servo motor, buzzer, and vibrator) are triggered to alert the user or dispense medication.  
+
+3. Data Transmission  
+   - The processed health data is sent to the **Blynk IoT app** via Wi-Fi (ESP8266/ESP32 module).  
+   - The app provides real-time monitoring and visualization of the data.  
+
+4. User Alerts & Actions 
+   - Buzzer & Vibrator: Immediate local alerts when health readings cross dangerous thresholds.  
+   - Servo Motor: Controls the automatic pill dispenser to release medication at the right time.  
+   - Blynk Notifications: Sends alerts to caregivers or doctors through the app.  
 
 # Project Media
 
+- Architecture Diagram:
+Below is a high-level architecture showing how the system works: 
+![System Architecture](architecture.png)
+- Below is Blynk dashboard Image:
+![Blynk Dashboard](blynk_dashboard.png) 
 
 
 # Future Improvements
